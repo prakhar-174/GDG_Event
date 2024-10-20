@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+  --primary: #4285F4;
+  --secondary: #34A853;
+  --accent: #FBBC05;
+  --dark: #202124;
+  --light: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--dark);
+  color: var(--light);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* .container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+} */
+
+/* Header Styles */
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(45deg, var(--primary), var(--secondary));
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('circuit-pattern.png') repeat;
+  opacity: 0.1;
+  animation: backgroundScroll 20s linear infinite;
+}
+
+@keyframes backgroundScroll {
+  from { background-position: 0 0; }
+  to { background-position: 100% 100%; }
+}
+
+.logo-container {
+  margin-bottom: 20px;
+  animation: fadeInUp 1s ease-out;
+}
+
+.logo {
+  max-width: 350px; /* Adjust this value based on your logo size */
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+}
+
+header p {
+  font-size: 2rem;
+  animation: fadeInUp 1s ease-out 0.5s backwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Responsive Design */
+@media(max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+  }
+}
